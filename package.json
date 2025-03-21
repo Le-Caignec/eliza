@@ -28,8 +28,13 @@
     "@biomejs/biome": "^1.9.4",
     "@commitlint/cli": "18.6.1",
     "@commitlint/config-conventional": "18.6.3",
+<<<<<<< Updated upstream
     "@types/jest": "29.5.14",
     "cli": "workspace:*",
+=======
+    "@types/jest": "^29.5.11",
+    "cli": "^0.25.9",
+>>>>>>> Stashed changes
     "concurrently": "9.1.0",
     "cross-env": "7.0.3",
     "husky": "9.1.7",
