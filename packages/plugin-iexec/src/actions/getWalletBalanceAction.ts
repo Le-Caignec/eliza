@@ -1,7 +1,6 @@
 import { Action, IAgentRuntime, Memory, State, Content } from "@elizaos/core";
 import { ethers } from "ethers";
 import { examples } from "./examples";
-import logger from "@elizaos/core/logger";
 
 export const getWalletBalanceAction: Action = {
     name: "GET_WALLET_BALANCE",
@@ -52,7 +51,7 @@ export const getWalletBalanceAction: Action = {
             await callback(response);
             return response;
         } catch (err) {
-            logger.error("[Ethereum Plugin] Error fetching balance:", err);
+            console.log("[Ethereum Plugin] Error fetching balance:", err);
             throw new Error("Failed to get wallet balance");
         }
     },

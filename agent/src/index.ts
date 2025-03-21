@@ -860,6 +860,7 @@ const startAgents = async () => {
     // This is used in client-direct/api.ts at "/agents/:agentId/set" route to restart an agent
     directClient.startAgent = async (character) => {
         // Handle plugins
+        console.log("🚀PLUGIN: ", character.plugins);
         character.plugins = await handlePluginImporting(character.plugins);
         elizaLogger.info(character.name, 'loaded plugins:', '[' + character.plugins.map(p => `"${p.npmName}"`).join(', ') + ']');
 
